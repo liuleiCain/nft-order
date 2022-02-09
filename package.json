@@ -1,0 +1,32 @@
+{
+  "name": "nft-order",
+  "version": "1.0.0",
+  "description": "Batch estimate account balances to the one address",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test/test.js --reporter spec"
+  },
+  "keywords": [
+    "nft",
+    "nft-order"
+  ],
+  "author": "pleurer",
+  "license": "MIT",
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "mocha": "^9.1.3"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.1",
+    "axios": "^0.25.0",
+    "bignumber.js": "^4.1.0",
+    "bn.js": "^5.2.0",
+    "ethereumjs-abi": "git+https://github.com/ProjectWyvern/ethereumjs-abi.git",
+    "ethereumjs-util": "^5.2.0",
+    "ethers": "^5.5.3",
+    "events": "^3.3.0",
+    "web3": "0.20.7",
+    "wyvern-js": "git+https://github.com/liuleiCain/wyvern-js.git#v3.3.0",
+    "wyvern-schemas": "git+https://github.com/liuleiCain/wyvern-schemas.git#v0.14.0"
+  }
+}

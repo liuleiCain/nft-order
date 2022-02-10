@@ -1,6 +1,6 @@
 {
   "name": "nft-order",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Batch estimate account balances to the one address",
   "main": "index.js",
   "scripts": {

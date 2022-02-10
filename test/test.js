@@ -1,22 +1,19 @@
 const {NftAutoBuy} = require('../index');
 
 async function testNftAutoBuy() {
-    const HDWalletProvider = require("@truffle/hdwallet-provider")
-
     let NAB = new NftAutoBuy("main")// only support main net
     let param = {
-        contract: "0xxxxxxxxxxxxxxxxxxxxx",
+        privateKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        contract: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        rpcUrl: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
         orderPrice: 0.1,
         orderAmount: 1,
-        web3Provider: new HDWalletProvider({
-            privateKeys: ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"],
-            providerOrUrl: "https://mainnet.infura.io"
-        }),
         interval: 5000
     }
-    console.log(param.web3Provider.getAddress(0))
 
     let res = await NAB.addTask(param)
+    console.log("addTask", res)
+
     if (res.code === 300) {
         NAB.emitter.on(param.contract, function (arg) {
             console.log(new Date().toLocaleString(), arg)
@@ -28,3 +25,5 @@ async function testNftAutoBuy() {
         })
     }
 }
+
+testNftAutoBuy()

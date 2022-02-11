@@ -1,6 +1,6 @@
 {
   "name": "nft-order",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Batch estimate account balances to the one address",
   "main": "index.js",
   "scripts": {
@@ -25,8 +25,7 @@
     "ethereumjs-util": "^5.2.0",
     "ethers": "^5.5.3",
     "events": "^3.3.0",
-    "web3": "0.20.7",
-    "wyvern-js": "git+https://github.com/liuleiCain/wyvern-js.git#v3.3.0",
-    "wyvern-schemas": "git+https://github.com/liuleiCain/wyvern-schemas.git#v0.14.0"
+    "opensea-js": "git+https://github.com/liuleiCain/opensea-js.git#v1.0.0",
+    "web3": "0.20.7"
   }
 }
